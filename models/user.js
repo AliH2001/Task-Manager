@@ -1,25 +1,15 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-const applicationSchema = new mongoose.Schema({
-    company: {
-        type: String,
-        required: true,
-    },
-    title: {
-        type: String,
-        required: true,
-    },
-    notes: {
-        type: String
-    },
-    postingLink: {
-        type: String
-    }, 
-    status: {
-        type: String,
-        enum: ['interested', 'applied', 'interviewing', 'rejected', 'accepted']
-    }
-})
+const TaskSchema = new mongoose.Schema({
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    title: { type: String, required: true },
+    description: { type: String },
+    deadline: { type: Date },
+    priority: { type: String, enum: ['low', 'medium', 'high'] },
+    status: { type: String, enum: ['complete', 'pending'], default: 'pending' }
+});
+
+module.exports = mongoose.model('Task', TaskSchema);
 
 const userSchema = new mongoose.Schema({
     username: {

@@ -1,26 +1,28 @@
 <%- include('../partials/head') %>
     <div class="container">
 
-        <h1>Add a New Application</h1>
+        <h1>Add a New Task</h1>
         <form action="/users/<%= user._id %>/applications" method="POST">
-            <label for="">Company:</label>
-            <input type="text" name="company">
-            <label for="">Title:</label>
+            <label for="">Title</label>
             <input type="text" name="title">
-            <label for="">Notes:</label>
-            <textarea name="notes" id=""></textarea>
-            <label for="">Posting Link:</label>
-            <input type="text" name="postingLink">
-            <label for="">Status:</label>
+            <label for="">Description</label>
+            <textarea name="Description" id=""></textarea>
+            <label for="deadline">Deadline</label>
+            <input type="date" id="deadline" name="deadline">
+            <label for="">Priorty</label>
+            <select name="Priorty" id="">
+                <option value="" selected disabled></option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <label for="">Status</label>
             <select name="status" id="">
                 <option value="" selected disabled></option>
-                <option value="interested">Interested</option>
-                <option value="applied">Applied</option>
-                <option value="interviewing">Interviewing</option>
-                <option value="rejected">Rejected</option>
-                <option value="accepted">Accepted</option>
+                <option value="complet">Complet</option>
+                <option value="pending">Pending</option>
             </select>
-            <button type="submit" class="btn btn-primary">Add Application</button>
+            <button type="submit" class="btn btn-primary">Add Task</button>
         </form>
         
     </div>
