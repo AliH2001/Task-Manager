@@ -4,9 +4,9 @@
     <h1>Sign in to your account</h1>
     <form action="/auth/sign-in" method="POST">
         <label for="">Username: </label>
-        <input type="text" name="username">
+        <input type="text" name="username" required="true">
         <label for="">Password: </label>
-        <input type="password" name="password">
+        <input type="password" name="password" required="true">
         <button type="submit" class="btn btn-primary">Sign in</button>
         <p><%= msg %></p>
     </form>

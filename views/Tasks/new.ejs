@@ -2,11 +2,11 @@
     <div class="container">
 
         <h1>Add a New Task</h1>
-        <form action="/users/<%= user._id %>/applications" method="POST">
+        <form action="/users/<%= user._id %>/Tasks" method="POST">
             <label for="">Title</label>
             <input type="text" name="title">
             <label for="">Description</label>
-            <textarea name="Description" id=""></textarea>
+            <textarea name="description" id=""></textarea>
             <label for="deadline">Deadline</label>
             <input type="date" id="deadline" name="deadline">
             <label for="">Priorty</label>
@@ -19,7 +19,7 @@
             <label for="">Status</label>
             <select name="status" id="">
                 <option value="" selected disabled></option>
-                <option value="complet">Complet</option>
+                <option value="complete">complete</option>
                 <option value="pending">Pending</option>
             </select>
             <button type="submit" class="btn btn-primary">Add Task</button>

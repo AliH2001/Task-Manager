@@ -22,6 +22,7 @@ mongoose.connection.on('connected', () => {
 })
 
 // MIDDLEWARE
+app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, "public")))
 app.use(methodOverride('_method'))
@@ -45,7 +46,7 @@ app.use(passUserToView)
 const pagesCtrl = require('./controllers/pages')
 const authCtrl = require('./controllers/auth')
 // const vipCtrl = require('./controllers/vip')
-const applicationsCtrl = require('./controllers/applications')
+const TasksCtrl = require('./controllers/task')
 
 // ROUTE HANDLERS
 app.get('/', pagesCtrl.home)
@@ -57,14 +58,14 @@ app.get('/auth/sign-out', authCtrl.signOut)
 
 app.use(isSignedIn) // anything under here, the user must be signed in
 
-// 67a1c05e7af170d98bdda837
-app.get('/users/:userId/applications/new', applicationsCtrl.newApplication) // view new application form
-app.post('/users/:userId/applications', applicationsCtrl.createApplication) // posting new application to the database
-app.get('/users/:userId/applications', applicationsCtrl.index) // view all the applications
-app.get('/users/:userId/applications/:applicationId', applicationsCtrl.show) // show details of one application
-app.delete('/users/:userId/applications/:applicationId', applicationsCtrl.deleteApplication)
-app.get('/users/:userId/applications/:applicationId/edit', applicationsCtrl.edit) // view an edit form
-app.put('/users/:userId/applications/:applicationId', applicationsCtrl.update)
+
+app.get('/users/:userId/Tasks/new', TasksCtrl.newTask) // view new Task form
+app.post('/users/:userId/Tasks', TasksCtrl.createTask) // posting new Task to the database
+app.get('/users/:userId/Tasks', TasksCtrl.index) // view all the Tasks
+app.get('/users/:userId/Tasks/:TaskId', TasksCtrl.show) // show details of one Task
+app.delete('/users/:userId/Tasks/:TaskId', TasksCtrl.deleteTask)
+app.get('/users/:userId/Tasks/:TaskId/edit', TasksCtrl.edit) // view an edit form
+app.put('/users/:userId/Tasks/:TaskId', TasksCtrl.update)
 
 // app.get('/vip-lounge', isSignedIn, vipCtrl.welcome)
 

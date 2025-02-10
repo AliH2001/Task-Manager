@@ -1,0 +1,34 @@
+<%- include('../partials/head') %>
+    <div class="container">
+
+        <div class="card mt-2" style="width: 18rem">
+            <div class="card-body">
+                <h5 class="card-title"><%= task.title %></h5>
+               
+                <p class="card-text"><%= task.description %></p>
+                <a href="/users/<%= user._id %>/tasks" class="card-link">Go Back</a>
+
+                <% if (task.status === 'Complete') { %>
+                <span class="badge bg-warning"><%= task.status %></span>
+                <% } else if (task.status === 'applied'){ %>
+                <span class="badge bg-info"><%= task.status %></span>
+                <% } else if (task.status === 'interviewing'){ %>
+                <span class="badge bg-secondary"
+                    ><%= task.status %></span>
+                <% } else if (task.status === 'rejected'){ %>
+                <span class="badge bg-danger"><%= task.status %></span>
+                <% } else { %>
+                <span class="badge bg-success"><%= task.status %></span>
+                <% } %>
+                <div class="d-flex justify-content-between mt-3">
+                <form action="/users/<%= user._id %>/tasks/<%= task._id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="btn btn-danger">Delete this task</button>
+                </form>
+                <a href="/users/<%= user._id %>/tasks/<%= task._id %>/edit">
+                    <button type="submit" class="btn btn-warning">Edit</button>
+                </a>
+                </div>
+            </div>
+        
+    </div>
+<%- include('../partials/footer') %>
