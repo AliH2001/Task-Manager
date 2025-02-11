@@ -106,39 +106,39 @@ body {
 }
 
 .card {
-    background-color: darkgrey; /* Card background color */
-    border-radius: 6px; /* Rounded corners */
-    width: 30%; /* Full width of the container */
+    background-color: darkgrey; 
+    border-radius: 6px; 
+    width: 30%; 
     display:inline-block;
     margin: 10px;
 }
 
 .card-title {
-    font-size: 1.5rem; /* Adjust title size */
-    font-weight: bold; /* Bold title */
+    font-size: 1.5rem; 
+    font-weight: bold; 
 }
 
 .card-text {
-    font-size: 1rem; /* Standard text size */
-    color: #333; /* Darker text for better readability */
+    font-size: 1rem; 
+    color: #333;
 }
 
 .card-link {
-    color: #007bff; /* Bootstrap's primary link color */
-    text-decoration: none; /* Remove underline */
+    color: #007bff; 
+    text-decoration: none;
 }
 
 .card-link:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
 
 .badge {
-    font-size: 0.875rem; /* Adjust badge font size */
-    padding: 0.5em; /* Padding for badges */
+    font-size: 0.875rem; 
+    padding: 0.5em; 
 }
 
 .btn {
-    margin-top: 0.5em; /* Space above buttons */
+    margin-top: 0.5em; 
 }
 
 
