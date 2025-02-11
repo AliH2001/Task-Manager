@@ -2,12 +2,12 @@
     <div class="container">
 
         <h1>Editing <%= task.title %> </h1>
-        <form action="/users/<%= user._id %>/tasks<%= task._id %>?_method=PUT" method="POST">
+        <form action="/users/<%= user._id %>/tasks/<%= task._id %>?_method=PUT" method="POST">
             <label for="">Title:</label>
             <input type="text" name="title" value="<%= task.title %>">
-            <label for="">Description:</label>
+            <label for="">Description</label>
             <input type="text" name="description" value="<%=  task.description %>">
-            <label for="">Deadline:</label>
+            <label for="">Deadline</label>
             <textarea type="date" name="deadline" id="deadline"><%= task.deadline %></textarea>
             <label for="">Priorty</label>
             <select name="Priorty" id="">

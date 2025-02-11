@@ -13,6 +13,13 @@ const path = require('path')
 const isSignedIn = require('./middleware/is-signed-in')
 const passUserToView = require('./middleware/pass-user-to-view')
 
+// CONTROLLERS
+const pagesCtrl = require('./controllers/pages')
+const authCtrl = require('./controllers/auth')
+// const vipCtrl = require('./controllers/vip')
+const TasksCtrl = require('./controllers/task')
+const addFormatDateToViews = require('./middleware/addFormatDateToViews')
+
 const port = process.env.PORT ? process.env.PORT : '3000'
 
 // creates a connection to MONGO database
@@ -40,13 +47,10 @@ app.use(session({
         secure: false,
     }
 }))
+app.use(addFormatDateToViews)
 app.use(passUserToView)
 
-// CONTROLLERS
-const pagesCtrl = require('./controllers/pages')
-const authCtrl = require('./controllers/auth')
-// const vipCtrl = require('./controllers/vip')
-const TasksCtrl = require('./controllers/task')
+
 
 // ROUTE HANDLERS
 app.get('/', pagesCtrl.home)

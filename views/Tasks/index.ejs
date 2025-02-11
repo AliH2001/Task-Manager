@@ -3,26 +3,15 @@
 <h1>Your Tasks</h1>
 	<div class="card-container">
 		<% Tasks.forEach(Task => { %>
-                <div class="card mt-2" style="width: 18rem">
+                <div class="card mt-2">
                     <div class="card-body">
                         <h5 class="card-title"><%= Task.title %></h5>
-                        <p class="card-text"><%= Task.notes %></p>
+                        <p class="card-text"><%= Task.description %></p>
 
-
-                       
                         <a href="/users/<%= user._id %>/Tasks/<%= Task._id %>" class="card-link">Show more</a>
 
-
-                        <% if (Task.status === 'interested') { %>
+                        <% if (Task.status === 'pending') { %>
                         <span class="badge bg-warning"><%= Task.status %></span>
-                        <% } else if (Task.status === 'applied'){ %>
-                        <span class="badge bg-info"><%= Task.status %></span>
-                        <% } else if (Task.status === 'interviewing'){ %>
-                        <span class="badge bg-secondary"
-                            ><%= Task.status %></span
-                        >
-                        <% } else if (Task.status === 'rejected'){ %>
-                        <span class="badge bg-danger"><%= Task.status %></span>
                         <% } else { %>
                         <span class="badge bg-success"><%= Task.status %></span>
                         <% } %>

@@ -95,7 +95,7 @@ const update = async (req, res) => {
         task.set(req.body)
         await currentUser.save()
 
-        res.redirect(`/users/${currentUser._id}/Tasks/${req.params.taskId}`)
+        res.redirect(`/users/${currentUser._id}/Tasks/${req.params.TaskId}`)
 
     } catch (err) {
         console.log(err)

@@ -1,72 +1,46 @@
 body {
-    background-color: white;
-    margin: 0px;
+    background: url('https://exudehc.com/wp-content/uploads/2016/06/compensation_management_banner_final.png') no-repeat center center fixed; /* Replace with the direct image link */
+    background-size: cover;
+    margin: 0;
+    color:black;
+    font-family: Arial, sans-serif;
     text-align: center;
-}
-
-/* .container {
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
-    align-items: center;
-} */
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 40vw;
-}
-
-form button {
-    margin-top: 10px;
-}
-
-
-.navbar {
-    background-color: #010e10;
+ /* .navbar {
+    background-color: red;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
+    
+} 
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-brand {
+ .navbar-brand {
     font-size: 24px;
     font-weight: bold;
     color: white;
     text-decoration: none;
-}
+} 
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30vh;
     margin: 0;
     padding: 0;
-}
+} 
 
 .nav-links li a {
     text-decoration: none;
     color: white;
     font-size: 18px;
     transition: color 0.3s;
-}
+} 
 
 .nav-links li a:hover {
     color: yellow;
@@ -80,7 +54,6 @@ form button {
     cursor: pointer;
     display: none;
 }
-
 
 @media (max-width: 768px) {
     .nav-links {
@@ -103,4 +76,147 @@ form button {
     .menu-toggle {
         display: block;
     }
+} */
+
+
+.navbar-brand img {
+    height: 30px; 
 }
+
+.nav-link {
+    color: #007bff; 
+}
+
+.nav-link:hover {
+    color: yellow; 
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* width: 100%; */
+    max-width: 1000px;
+    margin: 3rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.card {
+    background-color: darkgrey; /* Card background color */
+    border-radius: 6px; /* Rounded corners */
+    width: 30%; /* Full width of the container */
+    display:inline-block;
+    margin: 10px;
+}
+
+.card-title {
+    font-size: 1.5rem; /* Adjust title size */
+    font-weight: bold; /* Bold title */
+}
+
+.card-text {
+    font-size: 1rem; /* Standard text size */
+    color: #333; /* Darker text for better readability */
+}
+
+.card-link {
+    color: #007bff; /* Bootstrap's primary link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.card-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.badge {
+    font-size: 0.875rem; /* Adjust badge font size */
+    padding: 0.5em; /* Padding for badges */
+}
+
+.btn {
+    margin-top: 0.5em; /* Space above buttons */
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px; 
+    font-size: 1.8rem;
+    color: #000000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #e0e0e0;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.75rem; 
+    margin-bottom: 1rem; 
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+    box-sizing: border-box; 
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    background: #f0f0f0;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    background: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 150, 255, 0.5);
+}
+
+form button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+/* .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.card.mt-2 {
+    background-color: darkgrey;
+    border-radius: 6px;
+    width: 60%;
+} */
