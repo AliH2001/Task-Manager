@@ -1,12 +1,13 @@
 <%- include('../partials/head') %>
 <div class="container">
-    <div class="card mt-2">
+    <div class="show mt-2">
         <div class="card-body">
             <h5 class="card-title"><%= task.title %></h5>
             <p class="card-text"><%= task.description %></p>
             <p class="card-text"><strong>Deadline:</strong> <%= formatDate(task.deadline) %></p>
 
-            <a href="/users/<%= user._id %>/tasks" class="card-link">Go Back</a>
+            <!-- <a href="/users/<%= user._id %>/tasks" class="card-link">Go Back</a> -->
+           
 
             <% if (task.status === 'complete') { %>
                 <span class="badge bg-success"><%= task.status %></span>
@@ -14,11 +15,21 @@
                 <span class="badge bg-warning"><%= task.status %></span>
             <% } %>
 
+            <% if (task.priority === 'low') { %>
+                <span class="badge bg-success"><%= task.priority %></span>
+            <% } else if (task.priority === 'medium') { %>
+                <span class="badge bg-warning"><%= task.priority %></span>
+            <% } else { %>
+                <span class="badge bg-danger"><%= task.priority %></span>
+            <% } %>
+            
+            
             <div class="d-flex justify-content-between mt-3">
                 <form action="/users/<%= user._id %>/tasks/<%= task._id %>?_method=DELETE" method="POST">
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
                 <a href="/users/<%= user._id %>/tasks/<%= task._id %>/edit" class="btn btn-warning">Edit</a>
+                <a href="/users/<%= user._id %>/tasks" class="btn btn-primary card-link" style="color: white; text-decoration: none;">Go Back</a>
             </div>
         </div>
     </div>

@@ -10,75 +10,6 @@ body {
     flex-direction: column;
 }
 
- /* .navbar {
-    background-color: red;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    
-} 
-
- .navbar-brand {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-} 
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30vh;
-    margin: 0;
-    padding: 0;
-} 
-
-.nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: color 0.3s;
-} 
-
-.nav-links li a:hover {
-    color: yellow;
-}
-
-.menu-toggle {
-    font-size: 24px;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        background-color: #17a2b8;
-        width: 200px;
-        padding: 10px;
-        border-radius: 5px;
-        text-align: right;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-} */
-
-
 .navbar-brand img {
     height: 30px; 
 }
@@ -101,14 +32,22 @@ body {
     margin: 3rem auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
 .card {
-    background-color: darkgrey; 
+    background-color: rgb(44, 87, 228); 
     border-radius: 6px; 
-    width: 30%; 
+    width: 45%; 
+    height: 300px;
     display:inline-block;
     margin: 10px;
 }
@@ -116,11 +55,12 @@ body {
 .card-title {
     font-size: 1.5rem; 
     font-weight: bold; 
+    color: white;
 }
 
 .card-text {
     font-size: 1rem; 
-    color: #333;
+    color: white;
 }
 
 .card-link {
@@ -132,9 +72,13 @@ body {
     text-decoration: underline;
 }
 
-.badge {
-    font-size: 0.875rem; 
-    padding: 0.5em; 
+
+.badge{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    
+    
 }
 
 .btn {
@@ -144,7 +88,7 @@ body {
 
 h1 {
     text-align: center;
-    margin-bottom: 20px; 
+    /* margin-bottom: 20px;  */
     font-size: 1.8rem;
     color: #000000;
 }
@@ -152,14 +96,15 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    width: 70%;
+
 }
 
 label {
     display: block;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: #e0e0e0;
+    color: #070707;
 }
 
 input,
@@ -168,27 +113,16 @@ select {
     width: 100%;
     padding: 0.75rem; 
     margin-bottom: 1rem; 
-    border: none;
+    border: 10px;
     border-radius: 5px;
-    outline: none;
+    /* outline: none; */
     font-size: 1rem;
     color: #333;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: 3px;
 }
 
-input[type="text"],
-input[type="date"],
-textarea,
-select {
-    background: #f0f0f0;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-    background: #ffffff;
-    box-shadow: 0 0 5px rgba(0, 150, 255, 0.5);
-}
 
 form button {
     width: 100%;
@@ -213,10 +147,15 @@ form button:hover {
     gap: 1rem;
     justify-content: center;
     align-items: center;
-}
+} */
 
-.card.mt-2 {
-    background-color: darkgrey;
+.show.mt-2 {
+    background-color: rgb(44, 87, 228);
     border-radius: 6px;
     width: 60%;
-} */
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left:30px;
+    padding-right:30px;
+
+}

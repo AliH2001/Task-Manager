@@ -6,15 +6,28 @@
                 <div class="card mt-2">
                     <div class="card-body">
                         <h5 class="card-title"><%= Task.title %></h5>
-                        <p class="card-text"><%= Task.description %></p>
+                        <p class="card-text"><strong>Deadline:</strong> <%= formatDate(Task.deadline) %></p>
 
-                        <a href="/users/<%= user._id %>/Tasks/<%= Task._id %>" class="card-link">Show more</a>
+                        <div>
+                            <% if (Task.status === 'pending') { %>
+                            <span class="badge bg-danger"><%= Task.status %></span>
+                            <% } else { %>
+                                <span class="badge bg-success"><%= Task.status %></span>
+                            <% } %>
+                        
+                        
+                            <% if (Task.priority === 'low') { %>
+                                <span class="badge bg-success"><%= Task.priority %></span>
+                            <% } else if (Task.priority === 'medium') { %>
+                                <span class="badge bg-warning"><%= Task.priority %></span>
+                            <% } else { %>
+                                <span class="badge bg-danger"><%= Task.priority %></span>
+                            <% } %>
+                        </div>
 
-                        <% if (Task.status === 'pending') { %>
-                        <span class="badge bg-warning"><%= Task.status %></span>
-                        <% } else { %>
-                        <span class="badge bg-success"><%= Task.status %></span>
-                        <% } %>
+
+                                
+                                <a href="/users/<%= user._id %>/Tasks/<%= Task._id %>" class="btn btn-primary card-link" style="color: white; text-decoration: none;">Show more</a>
                     </div>
                 </div>
 		<% }) %>

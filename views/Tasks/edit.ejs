@@ -8,13 +8,13 @@
             <label for="">Description</label>
             <input type="text" name="description" value="<%=  task.description %>">
             <label for="">Deadline</label>
-            <textarea type="date" name="deadline" id="deadline"><%= task.deadline %></textarea>
+            <input type="date" id="deadline" name="deadline" value="<%= formatDate(task.deadline) %>">
             <label for="">Priorty</label>
-            <select name="Priorty" id="">
+            <select name="priority" id="">
                 <option value="" selected disabled></option>
-                <option value="low"<%= task.Priorty === "low" ? "selected" : '' %>>Low</option>
-                <option value="medium"<%= task.Priorty === "medium" ? "selected" : '' %>>Medium</option>
-                <option value="high"<%= task.Priorty === "high" ? "selected" : '' %>>High</option>
+                <option value="low"<%= task.priority === "low" ? "selected" : '' %>>Low</option>
+                <option value="medium"<%= task.priority === "medium" ? "selected" : '' %>>Medium</option>
+                <option value="high"<%= task.priority === "high" ? "selected" : '' %>>High</option>
             </select>
             <label for="">Status</label>
             <select name="status" id="">

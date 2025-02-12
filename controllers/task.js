@@ -45,7 +45,8 @@ const show = async (req, res) => {
         const Task = currentUser.task.id(req.params.TaskId);
         // Check if task exists
         if (!Task) {
-            return res.status(404).send("Task not found");
+           return res.redirect(`/users/${req.session.user._id}/Tasks`)
+            // return res.status(404).send("Task not found");
         }
 
         // Render the task show page
