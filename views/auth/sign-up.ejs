@@ -1,17 +1,19 @@
 <%- include('../partials/head') %>
-<div class="container">
+    <div class="container">
 
-    <h1>Create a new account!</h1>
-    <form action="/auth/sign-up" method="POST">
-        <label for="">Username: </label>
-        <input type="text" name="username" required="true">
-        <label for="">Password: </label>
-        <input type="password" name="password" required="true">
-        <label for="">Confirm Password: </label>
-        <input type="password" name="confirmPassword">
-        <button type="submit" class="btn btn-primary">Sign up</button>
-        <p><%= msg %></p>
-    </form>
-</div>
+        <h1>Create a new account!</h1>
+        <form action="/auth/sign-up" method="POST">
+            <label for="">Username: </label>
+            <input type="text" name="username" required="true">
+            <label for="">Password: </label>
+            <input type="password" name="password" required="true">
+            <label for="">Confirm Password: </label>
+            <input type="password" name="confirmPassword">
+            <button type="submit" class="btn btn-primary">Sign up</button>
+            <p>
+                <%= msg %>
+            </p>
+        </form>
+    </div>
 
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>

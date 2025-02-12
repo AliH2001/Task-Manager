@@ -6,7 +6,7 @@ const newTask = (req, res) => {
 }
 
 const createTask = async (req, res) => {
-    try {  
+    try {
         const currentUser = await User.findById(req.params.userId)
         console.log(req.body)
         currentUser.task.push(req.body) // pushing the formData into the user model
@@ -45,7 +45,7 @@ const show = async (req, res) => {
         const Task = currentUser.task.id(req.params.TaskId);
         // Check if task exists
         if (!Task) {
-           return res.redirect(`/users/${req.session.user._id}/Tasks`)
+            return res.redirect(`/users/${req.session.user._id}/Tasks`)
             // return res.status(404).send("Task not found");
         }
 

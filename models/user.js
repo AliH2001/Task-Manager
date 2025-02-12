@@ -11,16 +11,10 @@ const TaskSchema = new mongoose.Schema({
 module.exports = mongoose.model('Task', TaskSchema);
 
 const userSchema = new mongoose.Schema({
-    username: {
-        type: String,
-        required: true,
-    },
-    password: {
-        type: String,
-        required: true
-    },
+    username: { type: String, required: true, },
+    password: { type: String, required: true },
     task: [TaskSchema]
-}, {timestamps: true})
+}, { timestamps: true })
 
 const User = mongoose.model('User', userSchema)
 

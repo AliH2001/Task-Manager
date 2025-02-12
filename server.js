@@ -16,7 +16,6 @@ const passUserToView = require('./middleware/pass-user-to-view')
 // CONTROLLERS
 const pagesCtrl = require('./controllers/pages')
 const authCtrl = require('./controllers/auth')
-// const vipCtrl = require('./controllers/vip')
 const TasksCtrl = require('./controllers/task')
 const addFormatDateToViews = require('./middleware/addFormatDateToViews')
 
