@@ -10,7 +10,7 @@
 
                         <div>
                             <% if (Task.status === 'pending') { %>
-                            <span class="badge bg-danger"><%= Task.status %></span>
+                            <span class="badge bg-warning"><%= Task.status %></span>
                             <% } else { %>
                                 <span class="badge bg-success"><%= Task.status %></span>
                             <% } %>
