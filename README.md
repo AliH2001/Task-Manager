@@ -7,8 +7,7 @@
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Future Enhancements](#future-enhancements)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Description
 
